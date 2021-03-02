@@ -1,3 +1,3 @@
-# Vue JS Practice Repository
+# Vue Mastery
 
-## Branches
+## Vue 3 & TypeScript

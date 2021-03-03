@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <header>
+      <img alt="Vue logo" src="./../assets/logo.png" />
+      <h1>{{ msg }}</h1>
+    </header>
     <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
@@ -107,6 +110,21 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header img {
+  width: 30%;
+  margin: auto;
+  border: 5px dotted green;
+  border-radius: 50%;
+}
+h1{
+  text-align: center;
+}
 h3 {
   margin: 40px 0 0;
 }

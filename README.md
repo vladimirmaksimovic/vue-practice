@@ -1,3 +1,1 @@
-# Vue JS Practice Repository
-
-## Branches
+# Tania Rascia Vue Tutorial

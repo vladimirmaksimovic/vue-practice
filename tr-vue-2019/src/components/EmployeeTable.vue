@@ -3,8 +3,8 @@
     <table>
       <thead>
         <tr>
-          <th>Emplyee name</th>
-          <th>Emplyee email</th>
+          <th>Employee name</th>
+          <th>Employee email</th>
         </tr>
       </thead>
       <tbody>
@@ -24,3 +24,21 @@
     </table>
   </div>
 </template>
+
+<script>
+export default {
+  name: "employee-table",
+};
+</script>
+
+<style scoped>
+thead {
+  background: #009435;
+  color: #f1f1f1;
+}
+
+tr:hover {
+  background: #009435;
+  color: #f1f1f1;
+}
+</style>

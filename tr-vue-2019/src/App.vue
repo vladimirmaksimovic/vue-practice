@@ -3,7 +3,8 @@
     <img alt="Vue logo" src="@/assets/logo.png" />
     <h1>Employees</h1>
 
-    <employee-table />
+    <!-- v-bind: - pass data as prop to child component -->
+    <employee-table v-bind:employees="employees" />
   </div>
 </template>
 
@@ -14,6 +15,28 @@ export default {
   name: "app",
   components: {
     EmployeeTable,
+  },
+  data() {
+    return {
+      /* data array */
+      employees: [
+        {
+          id: 1,
+          name: "Richard Hendricks",
+          email: "richard@piedpiper.com",
+        },
+        {
+          id: 2,
+          name: "Bertram Gilfoyle",
+          email: "gilfoyle@piedpiper.com",
+        },
+        {
+          id: 3,
+          name: "Dinesh Chugtai",
+          email: "dinesh@piedpiper.com",
+        },
+      ],
+    };
   },
 };
 </script>

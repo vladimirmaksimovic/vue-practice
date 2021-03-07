@@ -1,5 +1,5 @@
 <template>
-  <div id="emplyee-table">
+  <div id="employee-table">
     <table>
       <thead>
         <tr>
@@ -8,7 +8,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <!-- v-for / :key - loop through data and display -->
+        <tr v-for="employee in employees" :key="employee.id">
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.email }}</td>
+        </tr>
+        <!-- <tr>
           <td>Mile Prpic</td>
           <td>prpa@mail.com</td>
         </tr>
@@ -19,7 +24,7 @@
         <tr>
           <td>Djole Mara</td>
           <td>djara@mail.com</td>
-        </tr>
+        </tr> -->
       </tbody>
     </table>
   </div>
@@ -28,6 +33,10 @@
 <script>
 export default {
   name: "employee-table",
+  // catch props from parent component
+  props: {
+    employees: Array,
+  },
 };
 </script>
 

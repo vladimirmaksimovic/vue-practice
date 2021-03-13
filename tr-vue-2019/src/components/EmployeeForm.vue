@@ -8,6 +8,7 @@
         :class="{ 'has-error': submitting && invalidName }"
         @focus="clearStatus"
         @keypress="clearStatus"
+        ref="first"
       />
       <label>Empolyee Email</label>
       <input
@@ -16,9 +17,11 @@
         :class="{ 'has-error': submitting && invalidEmail }"
         @focus="clearStatus"
       />
+      <!-- error msg -->
       <p v-if="error && submitting" class="error-message">
         Please fill out all required fields
       </p>
+      <!-- success msg -->
       <p v-if="success" class="success-message">Employee successfully added</p>
       <button v-on:click.prevent="handleSubmit">Add Empolyee</button>
     </form>
@@ -58,6 +61,8 @@ export default {
       }
 
       this.$emit("add:employee", this.employee);
+      /* focus on first referenced input */
+      this.$refs.first.focus();
 
       this.employee = {
         name: "",

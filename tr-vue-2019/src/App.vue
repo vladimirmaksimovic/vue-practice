@@ -6,7 +6,10 @@
     <employee-form v-on:add:employee="addEmployee" />
 
     <!-- v-bind: - pass data as prop to child component -->
-    <employee-table v-bind:employees="employees" />
+    <employee-table
+      v-bind:employees="employees"
+      @delete:employee="deleteEmployee"
+    />
   </div>
 </template>
 
@@ -53,6 +56,9 @@ export default {
       const newEmployee = { ...employee, id };
 
       this.employees = [...this.employees, newEmployee];
+    },
+    deleteEmployee(id) {
+      this.employees = this.employees.filter((employee) => employee.id !== id);
     },
   },
 };
